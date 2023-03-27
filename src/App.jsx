@@ -3,12 +3,12 @@ import './App.css'
 import data from'./assets/data.json'
 
 function App() {
-  // const userReply = data.comments.map(reply => ( (
-  //   <div key={reply.id}>
-  //     <p>{reply.text}</p>
-  //   </div>
-  // )
-  // ) )
+  const userReply = data.comments.map(reply => ( (
+    <div key={reply.id}>
+      <p>{reply.content}</p>
+    </div>
+  )
+  ) )
   const userComment = data.comments.map(comment => ( (
     <section>
       <div key={comment.id} className='comment-area'>
@@ -27,7 +27,7 @@ function App() {
           <p>{comment.content}</p>
         </div>
       </div>
-      {comment.replies && <div>true</div>}
+      {comment.replies && userReply}
         
     </section>
     )
