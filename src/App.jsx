@@ -3,7 +3,14 @@ import './App.css'
 import data from'./assets/data.json'
 
 function App() {
+  // const userReply = data.comments.map(reply => ( (
+  //   <div key={reply.id}>
+  //     <p>{reply.text}</p>
+  //   </div>
+  // )
+  // ) )
   const userComment = data.comments.map(comment => ( (
+    <section>
       <div key={comment.id} className='comment-area'>
         <div className='aside'>
           <span>+</span>
@@ -20,8 +27,12 @@ function App() {
           <p>{comment.content}</p>
         </div>
       </div>
+      {comment.replies && <div>true</div>}
+        
+    </section>
     )
   ))
+
   
 
   const getComment = (e) => {
@@ -30,6 +41,8 @@ function App() {
   return (
     <div className="container">
       {userComment}
+      {/* {userComment} */}
+      {/* <div className='replies-container'>{userComment}</div> */}
       {/* <div className='text-area'>
         <img src="/images/avatars/image-juliusomo.png" alt="" />
         <form onSubmit= {getComment}>

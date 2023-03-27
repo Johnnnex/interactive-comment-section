@@ -83,6 +83,12 @@ body {
 .comment-output p {
   padding-top: .5rem;
 }
+.replies-container {
+  width: 95%;
+  border-left: 2px solid var(--Lightgrayishblue);
+  margin: 0 0 1rem auto;
+  padding-left: 1rem;
+}
 /* .text-area {
   
 } */
