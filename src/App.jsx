@@ -3,8 +3,25 @@ import './App.css'
 import data from'./assets/data.json'
 
 function App() {
-  const [input, setInput] = useState(null)
-
+  const userComment = data.comments.map(comment => ( (
+      <div key={comment.id} className='comment-area'>
+        <div className='aside'>
+          <span>+</span>
+          <span>{comment.score}</span>
+          <span>-</span>
+        </div>
+        <div className='comment-output'>
+          <div className='top'>
+            <img className='img-reply' src={comment.user.image.webp} alt="" />
+            <b className='name'>{comment.user.username}</b>
+            <span>{comment.createdAt}</span>
+            <span className='reply-btn'><img src="/images/icon-reply.svg" alt="" />&nbsp;&nbsp;<b>Reply</b></span>
+          </div>
+          <p>{comment.content}</p>
+        </div>
+      </div>
+    )
+  ))
   
 
   const getComment = (e) => {
@@ -12,22 +29,7 @@ function App() {
   }
   return (
     <div className="container">
-      <div className='comment-area'>
-        <div className='aside'>
-          <span>+</span>
-          <span>12</span>
-          <span>-</span>
-        </div>
-        <div className='comment-output'>
-          <div className='top'>
-            <img className='img-reply' src="/images/avatars/image-juliusomo.png" alt="" />
-            <b className='name'>Amyrobson</b>
-            <span>1 month ago</span>
-            <span className='reply-btn'><img src="/images/icon-reply.svg" alt="" />&nbsp;&nbsp;<b>Reply</b></span>
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, et recusandae dignissimos in non porro libero, voluptas ipsum dolore fuga enim praesentium doloribus perferendis explicabo unde, culpa animi est. Aliquid.</p>
-        </div>
-      </div>
+      {userComment}
       {/* <div className='text-area'>
         <img src="/images/avatars/image-juliusomo.png" alt="" />
         <form onSubmit= {getComment}>
