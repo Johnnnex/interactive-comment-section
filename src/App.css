@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --lightBg: hsl(223, 19%, 93%);
+  --darkBlue: hsl(212, 24%, 26%);
+  --greyishBlue: hsl(211, 10%, 45%);
+  --White: hsl(0, 0%, 100%);
+  --Moderateblue: hsl(238, 40%, 52%);
+  --SoftRed: hsl(358, 79%, 66%);
+  --Lightgrayishblue: hsl(239, 57%, 85%);
+  --Palered: hsl(357, 100%, 86%);
+}
+body {
+  background-color: var(--lightBg);
+  font-family: 'Rubik', sans-serif;
+}
+.container {
+  width: 50%;
+  height: 90vh;
+  margin-inline: auto;
+  margin-block: 5vh;
+  overflow-x: hidden;
+}
+.comment-area {
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: var(--White);
+  display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 1rem;
+}
+.aside {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--lightBg);
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  height: fit-content;
+  padding: .5rem;
+  border-radius: 6px;
+}
+.aside span {
+  padding-bottom: 5px;
+}
+.aside span:first-child,
+.aside span:last-child {
+  cursor: pointer;
+}
+.comment-output {
+  flex: 1;
+  margin-left: 1rem;
+}
+.top {
+  display: flex;
+  align-items: center;
+}
+.name, .top>span {
+  padding-left: 1rem;
+}
+.top>span {
+  color: var(--greyishBlue);
+}
+.reply-btn {
+  flex: 1;
+  text-align: end;
+  color: var(--Moderateblue);
+  
+}
+.reply-btn b {
+  cursor: pointer;
+}
+.img-reply {
+  height: 2rem;
+}
+.comment-output p {
+  padding-top: .5rem;
+}
+/* .text-area {
+  
+} */
