@@ -20,6 +20,14 @@ body {
   background-color: var(--lightBg);
   font-family: 'Rubik', sans-serif;
 }
+@media all and (max-width: 375px){
+  .container {
+    width: 95% !important;
+  }
+  .text-area {
+    width: 95%!important;
+  }
+}
 .container {
   width: 50%;
   height: 90vh;
@@ -74,6 +82,7 @@ body {
 .reply-btn {
   color: var(--Moderateblue);
   cursor: pointer;
+  transition: .3s;
 }
 .reply-btn:hover,
 .reply-btn:focus {
