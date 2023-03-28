@@ -49,7 +49,10 @@ function App() {
                   <img className='img-reply' src={reply.user.image.webp} alt="" />
                   <b className='name'>{reply.user.username}</b>
                   <span className='time-stamp'>{reply.createdAt}</span>
-                  <span className='reply-btn'><img src="/images/icon-reply.svg" alt="" />&nbsp;&nbsp;<b>Reply</b></span>
+                  <span className='reply-btn'>
+                    {/* desktop design */}
+                    <img src="/images/icon-reply.svg" alt="" />&nbsp;&nbsp;<b>Reply</b>
+                  </span>
                 </div>
                 <p>{reply.content}</p>
               </div>
