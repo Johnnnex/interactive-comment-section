@@ -75,11 +75,11 @@ function App() {
       <div className='text-area'>
         <img className='img-comment' src="/images/avatars/image-juliusomo.png" alt="" />
         <form onSubmit= {getComment}>
-          <input className='inpt-sbmt' type="text" 
+          <input type="text" 
           onChange={(e) => setInput(e.target.value)} 
           placeholder = "Add a comment ...."
           />
-          <button className='btn-sbmt' type='submit'>SEND</button>
+          <button type='submit'>SEND</button>
         </form>
       </div>
     </div>
