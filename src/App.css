@@ -89,6 +89,32 @@ body {
   margin: 0 0 1rem auto;
   padding-left: 1rem;
 }
-/* .text-area {
-  
-} */
+.text-area {
+  position: fixed;
+  height: 15vh;
+  bottom: 5vh;
+  width: 50%;
+  border: 1px solid #000;
+  left: auto;
+  right: auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 1rem;
+}
+.img-comment {
+  height: 2.2rem;
+}
+.inpt-sbmt {
+  margin-right: 1rem;
+  height: 100%;
+  width: 30rem;
+  flex: 1;
+  font-size: 1rem;
+}
+.btn-sbmt {
+  width: 6rem;
+  height: 2rem;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+}

@@ -3,6 +3,7 @@ import './App.css'
 import data from'./assets/data.json'
 
 function App() {
+  const [input, setInput] = useState(null)
   // const [comments, setComments] = useState(data.comments)
   // const [comment, setComment] = useState('')
   // const [userComment, setUserComment] = useState('')
@@ -16,8 +17,8 @@ function App() {
   // const [isDeletingAllUsers, setIsDeletingAllUsers] = useState(false)
   // const [isDeletingAllCommentsAndUsers, setIsDeletingAllCommentsAndUsers] = useState(false)
   const userComment = data.comments.map(comment => ( (
-    <section>
-      <div key={comment.id} className='comment-area'>
+    <section key={comment.id}>
+      <div className='comment-area'>
         <div className='aside'>
           <span>+</span>
           <span>{comment.score}</span>
@@ -33,10 +34,11 @@ function App() {
           <p>{comment.content}</p>
         </div>
       </div>
+      <div className='replies-container'>
       {comment.replies && comment.replies.map(reply => {
         return (
-          <div className='replies-container'>
-            <div key={reply.id} className='comment-area'>
+          <div key={reply.id}>
+            <div className='comment-area'>
               <div className='aside'>
                 <span>+</span>
                 <span>{reply.score}</span>
@@ -55,6 +57,7 @@ function App() {
           </div>
         )
       })}
+      </div>
         
     </section>
     )
@@ -68,18 +71,17 @@ function App() {
   return (
     <div className="container">
       {userComment}
-      {/* {userComment} */}
-      {/* <div className='replies-container'>{userComment}</div> */}
-      {/* <div className='text-area'>
-        <img src="/images/avatars/image-juliusomo.png" alt="" />
+      {userComment}
+      <div className='text-area'>
+        <img className='img-comment' src="/images/avatars/image-juliusomo.png" alt="" />
         <form onSubmit= {getComment}>
-          <input type="text" 
+          <input className='inpt-sbmt' type="text" 
           onChange={(e) => setInput(e.target.value)} 
           placeholder = "Add a comment ...."
           />
-          <button type='submit'>SEND</button>
+          <button className='btn-sbmt' type='submit'>SEND</button>
         </form>
-      </div> */}
+      </div>
     </div>
   )
 }
