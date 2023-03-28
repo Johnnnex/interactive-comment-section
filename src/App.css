@@ -101,7 +101,7 @@ body {
   background-color: #fff;
   padding: 1rem;
   border-radius: 5px;
-  box-shadow: 1px 1px 1px #808080;
+  box-shadow: 1px 1px 4px 1px #808080;
 }
 form {
   display: flex;
